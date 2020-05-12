@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="SMSInfo"
+            type="com.app.development.dogsapp.model.SendSMS" />
+
+    </data>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="To"
+        android:layout_gravity="center_horizontal"
+        android:lines="1"
+        android:id="@+id/sendTo"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/sendDescription"
+        android:text="@{SMSInfo.text}"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ImageUrl="@{SMSInfo.imageUrl}"
+        android:scaleType="center"
+
+        />
+
+
+</LinearLayout>
+</layout>
